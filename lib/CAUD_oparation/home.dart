@@ -1,4 +1,5 @@
 import 'package:caud_project_api/CAUD_oparation/add_page.dart';
+import 'package:caud_project_api/CAUD_oparation/edit_page.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -48,7 +49,7 @@ class _HomePageState extends State<HomePage> {
                      if(value=="view"){
 
                      }else if(value=="edit"){
-
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => EdittedPage(edit_data: data),));
                      }else if(value=="delete"){
                        deleteData(id: dataId.toString());
                      }
